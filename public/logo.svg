@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300">
+  <path d="M0 0h1000v300H0z" fill="none"/>
+  <text x="50" y="200" fill="#4ade80" style="font-family: monospace; font-size: 150px; font-weight: bold;">MINI</text>
+  <path d="M550 50 L650 150 L550 250 L450 150 Z" fill="#4ade80" stroke="#4ade80" stroke-width="10"/>
+  <text x="700" y="200" fill="#4ade80" style="font-family: monospace; font-size: 150px; font-weight: bold;">AI</text>
+</svg>
