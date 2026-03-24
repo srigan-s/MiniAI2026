@@ -6,7 +6,7 @@ const Home = () => {
     <section id="home" className="relative min-h-screen">
       <div className="absolute inset-0">
         <img
-          src="/20250130_141150225_iOS.heic"
+          src="/plp.png"
           alt="Background"
           className="w-full h-screen object-cover"
         />
@@ -21,10 +21,17 @@ const Home = () => {
           <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-light px-4">
             Join our mission to make AI education accessible to all and empower the next generation of innovators.
           </p>
-          <button className="bg-green-400 hover:bg-green-500 text-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-full flex items-center justify-center space-x-3 mx-auto transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(74,222,128,0.5)]">
-            <span className="font-semibold">Apply Now</span>
-            <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-          </button>
+          <a
+            href="https://forms.gle/QzK5R4pXzLGgDHFu6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="bg-green-400 hover:bg-green-500 text-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-full flex items-center justify-center space-x-3 mx-auto transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(74,222,128,0.5)]">
+              <span className="font-semibold">Apply Now</span>
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
+          </a>
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

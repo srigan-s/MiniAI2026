@@ -34,9 +34,17 @@ const Navbar = () => {
     }
   ];
 
+  const navLinks = [
+    { id: 'home', label: 'Home' },
+    { id: 'mission', label: 'Message' },
+    { id: 'executives', label: 'Executives' },
+    { id: 'partners', label: 'Partners' },
+    { id: 'events', label: 'Events' }
+  ];
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md py-2' : 'bg-transparent py-4'
+      isScrolled || isMenuOpen ? 'bg-black py-2' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -44,7 +52,7 @@ const Navbar = () => {
             <img 
               src="/miniAIhorizontal.png" 
               alt="MiniAI" 
-              className="h-18 md:h-20" 
+              className="h-16 md:h-18" 
             />
           </div>
           
@@ -56,13 +64,13 @@ const Navbar = () => {
           </button>
 
           <div className="hidden md:flex items-center space-x-8">
-            {['home', 'message', 'executives', 'partners', 'events'].map((section) => (
+            {navLinks.map((link) => (
               <button
-                key={section}
-                onClick={() => scrollToSection(section)}
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
                 className="hover:text-green-400 transition-colors capitalize"
               >
-                {section}
+                {link.label}
               </button>
             ))}
             <div className="flex items-center space-x-4 border-l border-green-400/20 pl-8">
@@ -82,35 +90,35 @@ const Navbar = () => {
           </div>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-green-400/20 py-4">
-            <div className="flex flex-col space-y-4 px-4">
-              {['home', 'message', 'executives', 'partners', 'events'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className="hover:text-green-400 transition-colors capitalize text-left py-2"
+        <div className={`md:hidden absolute top-full left-0 right-0 bg-black border-t border-green-400/20 transition-all duration-300 ${
+          isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}>
+          <div className="flex flex-col space-y-4 px-4 py-4">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="hover:text-green-400 transition-colors capitalize text-left py-2"
+              >
+                {link.label}
+              </button>
+            ))}
+            <div className="flex items-center space-x-6 pt-4 border-t border-green-400/20">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-green-400 transition-colors flex items-center space-x-2"
                 >
-                  {section}
-                </button>
+                  <social.icon size={20} />
+                  <span>{social.label}</span>
+                </a>
               ))}
-              <div className="flex items-center space-x-6 pt-4 border-t border-green-400/20">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-green-400 transition-colors flex items-center space-x-2"
-                  >
-                    <social.icon size={20} />
-                    <span>{social.label}</span>
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

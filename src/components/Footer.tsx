@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src="/miniAIhorizontal.png" 
               alt="MiniAI" 
-              className="h-18 md:h-20 mx-auto md:mx-0" 
+              className="h-16 md:h-18 mx-auto md:mx-0" 
             />
             <p className="text-base md:text-lg mt-2 font-light">Empowering the next generation of AI innovators</p>
           </div>

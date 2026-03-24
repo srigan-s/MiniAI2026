@@ -1,24 +1,28 @@
 import React from 'react';
+import { Linkedin } from 'lucide-react';
 
 const executives = [
   {
     name: "Srigan Sivagnanenthirarajah",
     shortName: "Srigan Siva",
     role: "Chief Executive Officer",
-    image: "https://1drv.ms/i/c/e10a92eb637e5e38/EThefmPrkgoggOFDQQAAAAABf85QHpLNK7kQEsKFYNZAXQ?e=VMeTgC",
-    description: "Srigan Siva is our CEO and oversees all major operations. He coordinates partnerships, funding, and ensures that all programs and events run smoothly. Srigan organised this mission from the ground up, working closley with industry professionals."
+    image: "/sriganPFP.jpg",
+    description: "Srigan Siva is our CEO and oversees all major operations. He coordinates partnerships, funding, and ensures that all programs and events run smoothly. Srigan organised this mission from the ground up, working closley with industry professionals.",
+    linkedin: "https://www.linkedin.com/in/srigan-sivagnanenthirarajah-418601206/"
   },
   {
     name: "Vedant Kansara",
     role: "Chief Operating Officer",
-    image: "https://1drv.ms/i/c/e10a92eb637e5e38/EThefmPrkgoggOFEQQAAAAABXgps6cshONm9yuBSFYOzDw?e=49ccM8",
-    description: "Vedant Kansara is a talented educator tasked with the development of our curriculums, programs, and media. He ensures that presenters, presentations, and activities are all held to a high standard."
+    image: "/vedantPFP.jpg",
+    description: "Vedant Kansara is a talented educator tasked with the development of our curriculums, programs, and media. He ensures that presenters, presentations, and activities are all held to a high standard.",
+    linkedin: "https://www.linkedin.com/in/vedant-kansara-381330221/"
   },
   {
     name: "Ugan Sivagnanenthirarajah",
     role: "Director of Curriculum and Instruction",
-    image: "https://1drv.ms/i/c/e10a92eb637e5e38/EThefmPrkgoggOFFQQAAAAAB0rJOK7kWTcujTaMJ0ByiIQ?e=hQaoYA",
-    description: "With just over 5 years of experience being a Product Manager at Microsoft, Ugan's Senior Role allows the MiniAI team to construct a robust curriculum that follows the principles of AI."
+    image: "/uganPFP.jpg",
+    description: "With just over 5 years of experience being a Product Manager at Microsoft, Ugan's Senior Role allows the MiniAI team to construct a robust curriculum that follows the principles of AI.",
+    linkedin: "https://www.linkedin.com/in/ugans/"
   }
 ];
 
@@ -42,9 +46,20 @@ const Executives = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 </div>
                 <div className="p-6 md:p-8">
-                  <h3 className="text-xl md:text-2xl font-bold mb-2">
-                    {exec.shortName || exec.name}
-                  </h3>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold">
+                      {exec.shortName || exec.name}
+                    </h3>
+                    <a
+                      href={exec.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-green-400 transition-colors"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin size={20} />
+                    </a>
+                  </div>
                   <p className="text-green-400 mb-4 font-light">{exec.role}</p>
                   <p className="text-gray-300 font-light leading-relaxed text-sm md:text-base">
                     {exec.description}

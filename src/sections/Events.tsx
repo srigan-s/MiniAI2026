@@ -8,21 +8,33 @@ import 'swiper/css/navigation';
 const events = [
   {
     title: "8 Week Summer Cohort",
-    image: "https://1drv.ms/i/c/e10a92eb637e5e38/EThefmPrkgoggOG9QQAAAAAB45nAy-kbDDVEqsjsfKh-nw?e=l8Keuc",
+    image: "/summerAI.png",
     description: "Students engaged in the vast AI curriculum taught by instructors from across the industry",
     date: "July 8, 2024"
   },
   {
     title: "Baycrest Hospital Workshop",
-    image: "https://1drv.ms/u/c/e10a92eb637e5e38/EXm6IcB_AWREozoiQtTTidABybGTEh2etiAfayL4GM0I9w?e=X6DAg8",
+    image: "/baycrestAI.jpg",
     description: "Patients leaped through generations experiencing the wonders of AI",
     date: "November 14, 2024"
   },
   {
-    title: "TDSB School Workshop",
-    image: "https://1drv.ms/u/c/e10a92eb637e5e38/ETnCfsiIMUNHvwS2KtVa2DIBz2LepEU_j6mgtUVxMsA2Vw?e=xpdnAp",
+    title: "TDSB Middle School Workshop",
+    image: "/schoolAI.jpg",
     description: "Students engaged in a hands-on lesson explaining the dangers of Bias in AI",
     date: "January 30, 2024"
+  },
+  {
+    title: "MiniAI + FIRST Robotics",
+    image: "/robot.jpg",
+    description: "FTC teams partnered with MiniAI to become educated on the autonmous capabilities of robots.",
+    date: "December 16, 2024"
+  },
+  {
+    title: "TDSB Highschool Workshop",
+    image: "/jolly.jpg",
+    description: "Students engaged hands-on AI workshops and networking opportunities",
+    date: "November 22, 2024"
   }
 ];
 
