@@ -2,7 +2,7 @@ import React from 'react';
 
 const CeoMessage = () => {
   return (
-    <section className="py-16 md:py-24 min-h-[80vh] flex items-center bg-gradient-to-b from-green-950 to-black">
+    <section className="scene py-16 md:py-24 bg-gradient-to-b from-green-950 to-black">
       <div className="container mx-auto px-4 w-full" data-reveal>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center bg-black/45 border border-white/10 rounded-3xl p-8 md:p-12">
           <div>

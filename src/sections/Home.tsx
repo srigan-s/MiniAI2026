@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Home = () => {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden flex items-center py-24">
+    <section id="home" className="scene relative min-h-screen overflow-hidden py-24 scroll-mt-24">
       <div className="absolute inset-0">
         <img
           src="/plp.png"

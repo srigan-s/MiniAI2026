@@ -1,4 +1,9 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation, Mousewheel } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const events = [
   {
@@ -35,23 +40,57 @@ const events = [
 
 const Events = () => {
   return (
-    <section id="events" className="py-16 md:py-24 min-h-[90vh] flex items-center bg-black">
+    <section id="events" className="scene py-16 md:py-24 bg-black scroll-mt-24">
       <div className="container mx-auto px-4 w-full">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600 px-2" data-reveal>
           Recent Events
         </h1>
 
-        <div className="max-w-5xl mx-auto space-y-6 md:space-y-8">
-          {events.map((event, index) => (
-            <article key={event.title} data-reveal style={{ transitionDelay: `${index * 90}ms` }} className="group grid md:grid-cols-[280px_1fr] rounded-2xl overflow-hidden border border-white/10 bg-black/45 hover:border-green-400/40 transition-all duration-500">
-              <img src={event.image} alt={event.title} className="w-full h-56 md:h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              <div className="p-6 md:p-8">
-                <div className="inline-block bg-green-400 text-black px-4 py-1 rounded-full mb-4 text-sm font-semibold">{event.date}</div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-3">{event.title}</h2>
-                <p className="text-base md:text-lg max-w-2xl font-light text-gray-100">{event.description}</p>
-              </div>
-            </article>
-          ))}
+        <div className="max-w-5xl mx-auto" data-reveal>
+          <Swiper
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
+            direction="vertical"
+            spaceBetween={24}
+            centeredSlides
+            loop
+            grabCursor
+            autoplay={{
+              delay: 4500,
+              disableOnInteraction: false
+            }}
+            mousewheel={{
+              forceToAxis: true,
+              releaseOnEdges: true,
+              sensitivity: 1
+            }}
+            pagination={{
+              clickable: true
+            }}
+            navigation
+            className="h-[400px] md:h-[600px] rounded-2xl overflow-hidden border border-white/10"
+          >
+            {events.map((event) => (
+              <SwiperSlide key={event.title}>
+                <article className="relative h-full group">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex items-end">
+                    <div className="p-6 md:p-12">
+                      <div className="inline-block bg-green-400 text-black px-4 md:px-6 py-1 md:py-2 rounded-full mb-4 md:mb-6 text-sm md:text-base font-semibold">
+                        {event.date}
+                      </div>
+                      <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">{event.title}</h2>
+                      <p className="text-base md:text-xl max-w-2xl font-light line-clamp-3 md:line-clamp-none">{event.description}</p>
+                    </div>
+                  </div>
+                </article>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

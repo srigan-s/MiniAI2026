@@ -28,7 +28,7 @@ const executives = [
 
 const Executives = () => {
   return (
-    <section id="executives" className="py-16 md:py-24 bg-gradient-to-b from-green-950 to-black min-h-[90vh] flex items-center">
+    <section id="executives" className="scene py-16 md:py-24 bg-gradient-to-b from-green-950 to-black scroll-mt-24">
       <div className="container mx-auto px-4 w-full">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600 px-2" data-reveal>
           Our Leadership Team

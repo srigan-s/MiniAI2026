@@ -29,7 +29,7 @@ const partners = [
 
 const Partners = () => {
   return (
-    <section id="partners" className="py-16 md:py-24 bg-gradient-to-b from-black to-green-950 min-h-[85vh] flex items-center">
+    <section id="partners" className="scene py-16 md:py-24 bg-gradient-to-b from-black to-green-950 scroll-mt-24">
       <div className="container mx-auto px-4 w-full">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600" data-reveal>
           Knowledge Partners

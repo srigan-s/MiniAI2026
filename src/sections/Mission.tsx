@@ -26,7 +26,7 @@ const featureCards = [
 
 const Mission = () => {
   return (
-    <section id="mission" className="py-20 md:py-24 bg-gradient-to-b from-black to-green-950 min-h-[90vh] flex items-center">
+    <section id="mission" className="scene py-20 md:py-24 bg-gradient-to-b from-black to-green-950 scroll-mt-24">
       <div className="container mx-auto px-4 w-full">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16" data-reveal>
