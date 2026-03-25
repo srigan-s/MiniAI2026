@@ -7,7 +7,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -16,7 +16,7 @@ const Navbar = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setIsMenuOpen(false);
     }
   };
@@ -43,27 +43,29 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled || isMenuOpen ? 'bg-black py-2' : 'bg-transparent py-4'
+    <nav className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+      isScrolled || isMenuOpen ? 'bg-black/90 backdrop-blur-xl py-2 border-b border-white/10' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <img 
-              src="/miniAIhorizontal.png" 
-              alt="MiniAI" 
-              className="h-16 md:h-18" 
+        <div className="flex justify-between items-center gap-4">
+          <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2">
+            <img
+              src="/miniAIhorizontal.png"
+              alt="MiniAI"
+              className="h-14 md:h-16"
+              loading="lazy"
             />
-          </div>
-          
-          <button 
+          </button>
+
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white hover:text-green-400 transition-colors"
+            aria-label="Toggle Menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -73,7 +75,15 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <div className="flex items-center space-x-4 border-l border-green-400/20 pl-8">
+            <a
+              href="https://miniai-learn.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors"
+            >
+              Start Learning
+            </a>
+            <div className="flex items-center space-x-4 border-l border-green-400/20 pl-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -103,6 +113,14 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
+            <a
+              href="https://miniai-learn.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors"
+            >
+              Start Learning
+            </a>
             <div className="flex items-center space-x-6 pt-4 border-t border-green-400/20">
               {socialLinks.map((social) => (
                 <a
