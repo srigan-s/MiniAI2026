@@ -88,6 +88,17 @@ const Events = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        <div className="max-w-5xl mx-auto space-y-6 md:space-y-8">
+          {events.map((event, index) => (
+            <article key={event.title} data-reveal style={{ transitionDelay: `${index * 90}ms` }} className="group grid md:grid-cols-[280px_1fr] rounded-2xl overflow-hidden border border-white/10 bg-black/45 hover:border-green-400/40 transition-all duration-500">
+              <img src={event.image} alt={event.title} className="w-full h-56 md:h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div className="p-6 md:p-8">
+                <div className="inline-block bg-green-400 text-black px-4 py-1 rounded-full mb-4 text-sm font-semibold">{event.date}</div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-3">{event.title}</h2>
+                <p className="text-base md:text-lg max-w-2xl font-light text-gray-100">{event.description}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
