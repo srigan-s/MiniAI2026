@@ -13,19 +13,6 @@ body {
   background: #000;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #4ade80 !important;
-}
-
-.swiper-pagination-bullet {
-  background: #fff !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #4ade80 !important;
-}
-
 .reveal,
 [data-reveal] {
   opacity: 0;
