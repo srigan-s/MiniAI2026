@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background: #000;
 }
 
 .swiper-button-next,
@@ -25,21 +26,52 @@ body {
   background: #4ade80 !important;
 }
 
-@keyframes scroll {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(100%); }
-  100% { transform: translateY(0); }
+.reveal,
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 520ms ease, transform 520ms ease;
+  will-change: transform, opacity;
 }
 
-.animate-scroll {
-  animation: scroll 2s ease-in-out infinite;
+.reveal.is-visible,
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.animate-sequence-1 {
+  transition-delay: 80ms;
 }
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out forwards;
+.animate-sequence-2 {
+  transition-delay: 220ms;
+}
+
+.animate-sequence-3 {
+  transition-delay: 360ms;
+}
+
+@media (max-width: 768px) {
+  .reveal,
+  [data-reveal] {
+    transition-duration: 420ms;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
 }
