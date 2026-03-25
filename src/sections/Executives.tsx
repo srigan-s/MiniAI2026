@@ -4,7 +4,7 @@ import { Linkedin } from 'lucide-react';
 const executives = [
   {
     name: 'Srigan Sivagnanenthirarajah',
-    shortName: 'Srigan Siva',
+    shortName: 'Srigan Sivagnanenthirarajah',
     role: 'Chief Executive Officer',
     image: '/sriganPFP.jpg',
     description: 'Srigan Siva is our CEO and oversees all major operations. He coordinates partnerships, funding, and ensures that all programs and events run smoothly. Srigan organised this mission from the ground up, working closley with industry professionals.',
