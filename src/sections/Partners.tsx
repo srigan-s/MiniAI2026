@@ -15,7 +15,7 @@ const partners = [
   },
   {
     name: "University of Waterloo",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/1587px-Tesla_Motors.svg.png"
+    logo: "public\University_of_Waterloo_logo.png"
   },
   {
     name: "TDSB",
