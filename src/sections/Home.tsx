@@ -28,7 +28,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 reveal animate-sequence-3">
               <a
-                href="https://miniai-learn.netlify.app"
+                href="https://learn.miniai.ca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-400 hover:bg-green-300 text-black text-base md:text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(74,222,128,0.45)]"

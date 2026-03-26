@@ -22,7 +22,7 @@ const Home = () => {
             Join our mission to make AI education accessible to all and empower the next generation of innovators.
           </p>
           <a
-            href="https://miniai-learn.netlify.app"
+            href="https://learn.miniai.ca"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block"

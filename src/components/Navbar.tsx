@@ -76,7 +76,7 @@ const Navbar = () => {
               </button>
             ))}
             <a
-              href="https://miniai-learn.netlify.app"
+              href="https://learn.miniai.ca"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors"
@@ -114,7 +114,7 @@ const Navbar = () => {
               </button>
             ))}
             <a
-              href="https://miniai-learn.netlify.app"
+              href="https://learn.miniai.ca"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors"

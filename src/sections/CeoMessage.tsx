@@ -13,7 +13,7 @@ const CeoMessage = () => {
               Explore our growing platform and continue your journey with accessible, modern AI learning experiences built for students and communities.
             </p>
             <a
-              href="https://miniai-learn.netlify.app"
+              href="https://learn.miniai.ca"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex mt-6 px-6 py-3 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors"

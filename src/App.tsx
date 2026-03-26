@@ -12,7 +12,7 @@ const CTASection = ({ id }: { id: string }) => (
   <section id={id} className="py-10 md:py-14 bg-black/95 border-y border-white/10" data-reveal>
     <div className="container mx-auto px-4 text-center">
       <a
-        href="https://miniai-learn.netlify.app"
+        href="https://learn.miniai.ca"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors duration-300"
@@ -75,7 +75,7 @@ function App() {
       </main>
 
       <a
-        href="https://miniai-learn.netlify.app"
+        href="https://learn.miniai.ca"
         target="_blank"
         rel="noopener noreferrer"
         className="md:hidden fixed bottom-4 left-4 right-4 z-50 py-3 text-center rounded-full bg-green-400 text-black font-semibold shadow-lg shadow-green-400/25"

@@ -55,7 +55,7 @@ const Mission = () => {
 
           <div className="mt-10 text-center" data-reveal>
             <a
-              href="https://miniai-learn.netlify.app"
+              href="https://learn.miniai.ca"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-green-400 text-black font-semibold hover:bg-green-300 transition-colors duration-300"
